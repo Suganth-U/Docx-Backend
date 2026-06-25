@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">DocX Automated UI Test Suite</th></tr>
+<tr><td><a href="#t0">Authentication Tests</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">7</td><td class="num">103,481</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Booking and Navigation Tests</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19,656</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">9</th><th class="num">0</th><th class="num">0</th><th class="num attn">7</th><th class="num">123,137</th><th colspan="2"></th></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">DocX Automated UI Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Authentication Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">com.docx.tests.PatientLoginTest</td><td><a href="#m0">testEmptyFormShowsValidation</a></td><td rowspan="1">1782377593892</td><td rowspan="1">11391</td></tr><tr class="failedeven"><td><a href="#m1">testInvalidEmailFormat</a></td><td rowspan="1">1782377606313</td><td rowspan="1">11834</td></tr><tr class="failedeven"><td><a href="#m2">testShortPasswordValidation</a></td><td rowspan="1">1782377619351</td><td rowspan="1">11534</td></tr><tr class="failedodd"><td rowspan="4">com.docx.tests.SignupValidationTest</td><td><a href="#m3">testEmptyFormValidation</a></td><td rowspan="1">1782377641078</td><td rowspan="1">11547</td></tr><tr class="failedodd"><td><a href="#m4">testInvalidEmailValidation</a></td><td rowspan="1">1782377653796</td><td rowspan="1">11392</td></tr><tr class="failedodd"><td><a href="#m5">testPasswordMismatch</a></td><td rowspan="1">1782377666288</td><td rowspan="1">11263</td></tr><tr class="failedodd"><td><a href="#m6">testWeakPasswordValidation</a></td><td rowspan="1">1782377678506</td><td rowspan="1">11497</td></tr><tr><th colspan="4">Authentication Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.docx.tests.PatientLoginTest</td><td><a href="#m7">testDoctorLoginPageLoads</a></td><td rowspan="1">1782377636672</td><td rowspan="1">1266</td></tr><tr class="passedeven"><td><a href="#m8">testLoginPageLoads</a></td><td rowspan="1">1782377589589</td><td rowspan="1">3194</td></tr><tr class="passedeven"><td><a href="#m9">testWrongCredentialsShowError</a></td><td rowspan="1">1782377631916</td><td rowspan="1">3684</td></tr><tr class="passedodd"><td rowspan="1">com.docx.tests.SignupValidationTest</td><td><a href="#m10">testSignupPageLoads</a></td><td rowspan="1">1782377638973</td><td rowspan="1">1300</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Booking and Navigation Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">com.docx.tests.AppointmentBookingTest</td><td><a href="#m11">testAppointmentPageLoads</a></td><td rowspan="1">1782377691348</td><td rowspan="1">1339</td></tr><tr class="passedeven"><td><a href="#m12">testAppointmentWithDoctorParams</a></td><td rowspan="1">1782377693612</td><td rowspan="1">1379</td></tr><tr class="passedeven"><td><a href="#m13">testFaqPageLoads</a></td><td rowspan="1">1782377706333</td><td rowspan="1">3352</td></tr><tr class="passedeven"><td><a href="#m14">testFindDoctorsPageLoads</a></td><td rowspan="1">1782377696096</td><td rowspan="1">3448</td></tr><tr class="passedeven"><td><a href="#m15">testPharmacyPageLoads</a></td><td rowspan="1">1782377701200</td><td rowspan="1">4042</td></tr></tbody>
+</table>
+<h2>Authentication Tests</h2><h3 id="m0">com.docx.tests.PatientLoginTest#testEmptyFormShowsValidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Inline validation error should appear when form is submitted empty expected [true] but found [false]
+	at com.docx.tests.PatientLoginTest.testEmptyFormShowsValidation(PatientLoginTest.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.docx.tests.PatientLoginTest#testInvalidEmailFormat</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Field error should appear for an invalid email format expected [true] but found [false]
+	at com.docx.tests.PatientLoginTest.testInvalidEmailFormat(PatientLoginTest.java:72)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.docx.tests.PatientLoginTest#testShortPasswordValidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Field error should appear for a password that is too short expected [true] but found [false]
+	at com.docx.tests.PatientLoginTest.testShortPasswordValidation(PatientLoginTest.java:89)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.docx.tests.SignupValidationTest#testEmptyFormValidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Validation errors should appear for empty form submission expected [true] but found [false]
+	at com.docx.tests.SignupValidationTest.testEmptyFormValidation(SignupValidationTest.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.docx.tests.SignupValidationTest#testInvalidEmailValidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#signup\-firstName&quot;}
+  (Session info: chrome=149.0.7827.158)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.5&apos;, java.version: &apos;26.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eea8a7e422179b43ca3bc920a27e1018, findElement {value=signup-firstName, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.158, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: /var/folders/_x/vtwm_77109l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49308}, goog:processID: 19782, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49308/devtoo..., se:cdpVersion: 149.0.7827.158, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eea8a7e422179b43ca3bc920a27e1018
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.docx.tests.pages.SignupPage.enterFirstName(SignupPage.java:40)
+	at com.docx.tests.SignupValidationTest.testInvalidEmailValidation(SignupValidationTest.java:62)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.docx.tests.SignupValidationTest#testPasswordMismatch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#signup\-firstName&quot;}
+  (Session info: chrome=149.0.7827.158)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.5&apos;, java.version: &apos;26.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ed9838de7c43b5b313b4dce4fd676de8, findElement {value=signup-firstName, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.158, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: /var/folders/_x/vtwm_77109l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49495}, goog:processID: 19802, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49495/devtoo..., se:cdpVersion: 149.0.7827.158, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ed9838de7c43b5b313b4dce4fd676de8
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.docx.tests.pages.SignupPage.enterFirstName(SignupPage.java:40)
+	at com.docx.tests.SignupValidationTest.testPasswordMismatch(SignupValidationTest.java:82)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.docx.tests.SignupValidationTest#testWeakPasswordValidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#signup\-firstName&quot;}
+  (Session info: chrome=149.0.7827.158)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.5&apos;, java.version: &apos;26.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9e076a876a5ea42195a78443a7f5163b, findElement {value=signup-firstName, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.158, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: /var/folders/_x/vtwm_77109l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49679}, goog:processID: 19816, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49679/devtoo..., se:cdpVersion: 149.0.7827.158, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9e076a876a5ea42195a78443a7f5163b
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.docx.tests.pages.SignupPage.enterFirstName(SignupPage.java:40)
+	at com.docx.tests.SignupValidationTest.testWeakPasswordValidation(SignupValidationTest.java:102)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.docx.tests.PatientLoginTest#testDoctorLoginPageLoads</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.docx.tests.PatientLoginTest#testLoginPageLoads</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.docx.tests.PatientLoginTest#testWrongCredentialsShowError</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.docx.tests.SignupValidationTest#testSignupPageLoads</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Booking and Navigation Tests</h2><h3 id="m11">com.docx.tests.AppointmentBookingTest#testAppointmentPageLoads</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">com.docx.tests.AppointmentBookingTest#testAppointmentWithDoctorParams</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">com.docx.tests.AppointmentBookingTest#testFaqPageLoads</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">com.docx.tests.AppointmentBookingTest#testFindDoctorsPageLoads</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">com.docx.tests.AppointmentBookingTest#testPharmacyPageLoads</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

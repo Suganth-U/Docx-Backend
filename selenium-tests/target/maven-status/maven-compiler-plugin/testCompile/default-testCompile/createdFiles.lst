@@ -1,0 +1,7 @@
+com/docx/tests/SignupValidationTest.class
+com/docx/tests/pages/AppointmentPage.class
+com/docx/tests/PatientLoginTest.class
+com/docx/tests/pages/SignupPage.class
+com/docx/tests/AppointmentBookingTest.class
+com/docx/tests/pages/LoginPage.class
+com/docx/tests/base/BaseTest.class

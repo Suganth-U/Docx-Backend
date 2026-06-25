@@ -1,0 +1,102 @@
+@import "../../Admin/NavBar/NavBar.css";
+
+.doctor-nav-shell {
+  gap: 20px;
+}
+
+.doctor-nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: 30px;
+  flex: 1;
+  position: relative;
+  min-width: 0;
+}
+
+.doctor-nav-shell .identity-chip {
+  cursor: pointer;
+}
+
+.doctor-profile-dropdown {
+  align-items: center;
+}
+
+.doctor-avatar-trigger {
+  appearance: none;
+  background: transparent;
+  padding: 4px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+}
+
+.doctor-avatar-trigger:hover,
+.doctor-avatar-trigger:focus-visible {
+  background-color: #f9fafb;
+  border-color: #e5e7eb;
+  outline: none;
+}
+
+.doctor-profile-menu {
+  top: 52px;
+}
+
+.bg-green-light-subtle {
+  background: #ecfdf5;
+}
+
+.text-green-main {
+  color: #16a34a;
+}
+
+@media (max-width: 1380px) {
+  .doctor-nav-shell {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 72px;
+    align-items: center;
+  }
+
+  .doctor-nav-links {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    padding: 0 4px 4px;
+    overflow-x: auto;
+  }
+
+  .doctor-nav-links::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .doctor-nav-links::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 999px;
+  }
+
+  .doctor-nav-shell .nav-search-section {
+    max-width: none;
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 900px) {
+  .doctor-nav-shell .nav-tools-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 680px) {
+  .doctor-nav-shell .identity-text {
+    display: none;
+  }
+
+  .doctor-nav-shell .nav-search-section {
+    min-width: 100%;
+  }
+
+  .doctor-nav-shell .shortcut-hint {
+    display: none;
+  }
+}

@@ -1,0 +1,933 @@
+.main-services {
+  background: linear-gradient(rgba(8, 8, 8, 0.619), rgba(8, 8, 8, 0.619)),
+    url("/assets/app/slider2.jpg");
+  width: 100%;
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+.service-description {
+  width: 90%;
+  margin: 40px auto;
+}
+.describtion-text hr {
+  width: 50%;
+}
+.service-description .description-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service-description .description-container img {
+  width: 600px;
+}
+.service-description .describtion-text {
+  width: 65%;
+}
+.service-description .describtion-text p {
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 17px;
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  padding: 10px;
+  color: #5C4580;
+}
+.service-description .describtion-text h1 {
+  font-size: 38px;
+  line-height: 1.4;
+  margin-top: 10px;
+  color: #40739e;
+}
+.service-description .describtion-text #subtitle {
+  font-size: 16px;
+  padding: 4px 0;
+}
+
+.services-header .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 40px 0;
+  opacity: 0.6;
+  background: transparent;
+  color: #fff;
+  width: 100%;
+}
+.services-header h1 {
+  font-size: 40px;
+  line-height: 1.4;
+  font-weight: 300;
+}
+.services-header h2 {
+  font-size: 18px;
+  line-height: 1.4;
+}
+.services-header img {
+  width: 20px;
+  line-height: 1.4;
+  margin-right: 10px;
+}
+
+.pricing h1 {
+  text-align: center;
+  margin: 70px 0;
+  font-size: 40px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #40739e;
+  font-family: "Poppins", serif;
+}
+
+.services-container h1 {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 40px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #8e7dbe;
+  font-family: "Poppins", serif;
+}
+.service-pricing {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #8e7dbe;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+
+.plan {
+  border-radius: 16px;
+  box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
+  padding: 10px;
+  background-color: #fff;
+  color: #697e91;
+  max-width: 420px;
+  height: 480px;
+  margin: 40px;
+  transition: all ease-in 0.1s;
+  font-family: "Poppins", serif;
+}
+.plan:hover,
+.regular:hover {
+  transform: translateY(-10px);
+}
+.plan strong {
+  font-weight: 600;
+  color: #425275;
+}
+
+.plan .inner {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 20px;
+  padding-top: 40px;
+  background-color: #f5f7fb;
+  border-radius: 12px;
+  position: relative;
+}
+
+.plan .pricing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #c0b9dd;
+  border-radius: 99em 0 0 99em;
+  display: flex;
+  align-items: center;
+  padding: 0.625em 0.75em;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #425475;
+}
+
+.plan .pricing small {
+  color: #707a91;
+  font-size: 0.75em;
+  margin-left: 0.25em;
+}
+
+.plan .title {
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: #425675;
+}
+
+.plan .title {
+  margin-top: 0.75rem;
+}
+
+.plan .title + * {
+  margin-top: 0.75rem;
+}
+
+.plan .info + * {
+  margin-top: 1rem;
+}
+
+.plan .features {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 5px 0 5px;
+  
+}
+
+.plan .features li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+}
+.plan .features li span{
+  font-size: 15px;
+}
+
+.plan .features li + * {
+  margin-top: 1.35rem;
+
+}
+
+.plan .features .icon {
+  background-color: #cdc1ff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #2D1B4E;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.plan .features .icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.plan .features + * {
+  margin-top: 1rem;
+}
+
+.plan .action {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.plan .button {
+  background-color: #8367c7;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-align: center;
+  border: 1px solid #8367c7;
+  outline: 0;
+  width: 100%;
+  padding: 0.565em 0.75em;
+  text-decoration: none;
+  margin: 30px 0;
+}
+
+.plan .button:hover,
+.plan .button:focus {
+  opacity: 0.8;
+}
+.service-pricing .regular {
+  transform: translateY(-100px);
+}
+.service-pricing .regular:hover {
+  transform: translateY(-105px);
+}
+
+.services-container .services .service {
+  background: #2f3542;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: #fff;
+  line-height: 1.7;
+}
+.services-container .services .service h2 {
+  text-align: center;
+}
+
+.services-container .services .service p {
+  color: #f2eaea;
+  line-height: 1.7;
+  padding: 10px;
+  text-align: justify;
+}
+
+.services-container .services .service img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.services-container .services .white {
+  background: transparent;
+  color: #2D1B4E;
+}
+.services-container .services .white p {
+  color: #5C4580;
+}
+
+.services-container .services {
+  width: 90vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.services-container {
+  margin: 50px 0;
+}
+.it-works {
+  margin: 70px 50px 10px 50px;
+}
+.it-works .it-works-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", serif;
+  gap: 10px;
+}
+
+.it-works .it-works-container .it-works-text {
+  width: 50%;
+  margin: 100px 0 0 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+.it-works .it-works-container .it-works-text .header {
+  color: #777;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.it-works .it-works-container .it-works-text h2 {
+  font-size: 45px;
+  color: #1f6a9c;
+  text-shadow: 1px 1px 1px #000;
+  margin-bottom: 10px;
+}
+.it-works .it-works-container .it-works-text .works-body {
+  line-height: 1.4;
+  text-align: justify;
+}
+.it-works .it-works-container .it-works-text hr {
+  width: 200px;
+  margin-bottom: 6px;
+}
+.it-works .it-works-container .it-works-box {
+  width: 40%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+  margin-top: 30px;
+  align-content: center;
+  transform: rotate(20deg);
+}
+
+.it-works .it-works-container .it-works-box .it-works-box-item1,
+.it-works .it-works-container .it-works-box .it-works-box-item2,
+.it-works .it-works-container .it-works-box .it-works-box-item3,
+.it-works .it-works-container .it-works-box .it-works-box-item4 {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px #000;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  transform: rotate(-20deg);
+  background-size: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(4px);
+}
+.it-works .it-works-container .it-works-box .it-works-box-item1 {
+  background: #2f3542;
+  color: #fdfdfd;
+}
+
+.it-works .it-works-container .it-works-box .it-works-box-item3 {
+  background: #2f3542;
+  color: #fdfdfd;
+}
+.it-works-box p {
+  margin-top: 7px;
+  color: #2D1B4E;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 300;
+}
+.it-works-box .header {
+  font-size: 25px;
+  color: #2f3542;
+  font-weight: 500;
+}
+.it-works .it-works-container .it-works-box .it-works-box-item1 p {
+  color: #cac9c9;
+}
+.it-works .it-works-container .it-works-box .it-works-box-item3 p {
+  color: #cac9c9;
+}
+.it-works .it-works-container .it-works-box .it-works-box-item1 .header {
+  color: #fff;
+}
+.it-works .it-works-container .it-works-box .it-works-box-item3 .header {
+  color: #fff;
+}
+
+.Easy-service {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 60px 40px 60px;
+}
+.Easy-service h3 {
+  font-size: 18px;
+  font-weight: 300;
+}
+.Easy-service .quick-access {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.Easy-service .quick-access .service {
+  width: 250px;
+  height: 300px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding: 10px 0 0 0;
+  transition: all ease-in 0.2s;
+}
+.Easy-service .quick-access .service1 {
+  background-color: #e8e8e4;
+}
+.Easy-service .quick-access .service2 {
+  background-color: #f5efff;
+}
+.Easy-service .quick-access .service3 {
+  background-color: #f5efff;
+}
+.Easy-service .quick-access .service4 {
+  background-color: #dbe9ee;
+}
+.Easy-service .quick-access .service:hover {
+  opacity: 0.8;
+}
+.Easy-service .quick-access .service .serviceText {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.Easy-service .quick-access .service h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0px 0 0 0;
+  color: #1f6a9c;
+}
+.Easy-service .quick-access .service p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #777;
+  margin: -2px 0 0 0;
+  line-height: 1.4;
+  text-align: center;
+}
+.Easy-service .quick-access .service img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+.Easy-service .quick-access .service2 {
+  background: #b8eded;
+}
+.Easy-service .quick-access .service3 {
+  background: #b8bedd;
+}
+.Easy-service .quick-access .service3 img {
+  width: 87%;
+  height: auto;
+}
+.Appointment {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 60px 40px 60px;
+}
+
+.backhome {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.backhome img {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.backhome span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.appointment-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Appointment form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.appointment-form h2 {
+  font-weight: 400;
+  margin-left: -5px;
+  margin-bottom: 10px;
+}
+.form-leftSection,
+.form-rightSection {
+  flex: 1;
+  min-width: 400px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  margin-bottom: 6px;
+  font-weight: 300;
+  color: #3D2660;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+  background-color: #fff;
+}
+
+.form-boxsection {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.form-boxsection .form-field {
+  width: 100%;
+}
+
+fieldset {
+  margin-top: 20px;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.box-week h3,
+.time-field h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #3D2660;
+  font-weight: 500;
+  margin-left: 0px;
+}
+
+.week-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.week-field span {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.week-field input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.Appointment hr {
+  margin: 20px 0;
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.Appointment button {
+  margin-top: 20px;
+  background-color: #4a90e2;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Appointment button:hover {
+  background-color: #357abd;
+}
+#dropdown {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  width: 623px; /* Increased width for better visibility */
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  background-color: white; /* Ensure white background */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4z'%3E%3C/path%3E%3C/svg%3E"); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Position the arrow */
+  background-size: 8px 10px; /* Size of the arrow */
+  cursor: pointer; /* Show a pointer on hover */
+  transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+/* Style for the options (dropdown list) */
+#dropdown option {
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #3D2660;
+  background-color: #fff; /* White background for options */
+}
+
+/* Hover state for the select element */
+#dropdown:hover,
+#dropdown:focus {
+  border-color: #007bff; /* Highlight border on hover/focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Style for the focused state of the select element */
+#dropdown:focus {
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Add a subtle shadow */
+}
+
+/* Style for disabled select element */
+#dropdown:disabled {
+  background-color: #e9ecef; /* Light gray background for disabled */
+  opacity: 0.6; /* Reduce opacity for disabled state */
+  cursor: not-allowed; /* Change cursor to not-allowed */
+  border-color: #ced4da; /* Lighter border for disabled */
+}
+#dropdown:disabled:hover,
+#dropdown:disabled:focus {
+  border-color: #ced4da; /* Lighter border for disabled */
+  box-shadow: none;
+}
+
+.popup-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* transparent black background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-content {
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.close-button {
+  position: absolute;
+  top: 1px;
+  right: 7px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.Appointment form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.form-leftSection,
+.form-rightSection {
+  flex: 1;
+  min-width: 400px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #3D2660;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+  background-color: #fff;
+}
+
+.Appointment fieldset {
+  margin-top: 20px;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.fieldset-medicalCondition h3,
+.fieldset-Allergies h3,
+.fieldset-CurrentMedications h3,
+.fieldset-surgeries h3,
+.fieldset-reson h3,
+.field-request h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #3D2660;
+}
+
+.chek_field,
+.input_field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chek_field span,
+.input_field span {
+  flex: 1;
+  font-size: 16px;
+}
+
+.chek_field input[type="checkbox"],
+.input_field input,
+.input_field select,
+.input_field textarea {
+  width: 50%;
+}
+
+.form-field hr {
+  margin: 20px 0;
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.form-boxsection {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.form-boxsection .form-field {
+  width: 100%;
+}
+
+.form-boxsection button {
+  margin-top: 20px;
+  background-color: #4a90e2;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-boxsection button:hover {
+  background-color: #357abd;
+}
+/* --- Modal Overlay Styles --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other content */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Make the modal visible */
+.modal-overlay.success,
+.modal-overlay.error {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-content p {
+  font-size: 1.1em;
+  color: #3D2660;
+  white-space: pre-wrap; /* Preserve newlines from \n */
+  margin-bottom: 20px;
+}
+
+.modal-content small {
+  color: #5C4580;
+  display: block; /* Make it a block element for its own line */
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.modal-content .close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #888;
+}
+
+.modal-content .close-button:hover {
+  color: #3D2660;
+}
+
+.modal-content button {
+  background-color: #007bff; /* Primary blue for button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.modal-overlay.error .modal-content button {
+  background-color: #dc3545; /* Red for error button */
+}
+
+.modal-overlay.success .modal-content button {
+  background-color: #28a745; /* Green for success button */
+}
+
+.modal-content button:hover {
+  opacity: 0.9;
+}
+
+/* --- Existing form styles (ensure they don't conflict) --- */
+/* Your other .Appointment, .appointment-form, .form-field, etc. styles */
+/* ... (keep your existing CSS for the form layout) ... */
+
+/* Example: Basic styles for loading/error messages */
+.loading-message,
+.error-message {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 50px;
+  color: #007bff;
+}
+
+.error-message {
+  color: #dc3545;
+}
+
+/* If you previously had .submit-message, you can remove it or repurpose it */
+.submit-message {
+  /* This is no longer used with the modal */
+  display: none;
+}

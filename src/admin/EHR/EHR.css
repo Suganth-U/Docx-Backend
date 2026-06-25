@@ -1,0 +1,322 @@
+/* ═══════════════════════════════════════════════════════
+   Admin EHR Page — Premium Clinical Dashboard
+   ═══════════════════════════════════════════════════════ */
+
+.ehr-container {
+    padding: 0;
+}
+
+/* ── Stats Row ─── */
+.ehr-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.ehr-stat-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.2s;
+}
+
+.ehr-stat-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+}
+
+.ehr-stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ehr-stat-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.ehr-stat-card p {
+    font-size: 12px;
+    color: #94a3b8;
+    margin: 2px 0 0;
+    font-weight: 500;
+}
+
+/* ── Pending Section ─── */
+.pending-section {
+    border-left: 4px solid #f59e0b;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.section-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.pending-count {
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.pending-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pending-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 10px;
+    padding: 14px 18px;
+    transition: all 0.2s;
+}
+
+.pending-item:hover {
+    background: #fef9c3;
+}
+
+.pending-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pending-info strong {
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.pending-doctor {
+    font-size: 12px;
+    color: #78716c;
+}
+
+.pending-meds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.med-tag {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #475569;
+}
+
+.dispense-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #059669;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.dispense-btn:hover {
+    background: #047857;
+}
+
+.dispense-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ── Back Button ─── */
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.back-btn:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+/* ── Patient Summary Bar ─── */
+.patient-summary-bar {
+    margin-bottom: 0;
+}
+
+.summary-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.summary-chip {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.summary-chip.blood {
+    background: #fef2f2;
+    border-color: #fecaca;
+    color: #dc2626;
+}
+
+.summary-chip.allergy {
+    background: #fff7ed;
+    border-color: #fed7aa;
+    color: #c2410c;
+}
+
+.summary-chip.chronic {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: #2563eb;
+}
+
+.summary-chip.visits {
+    background: #ede9fe;
+    border-color: #ddd6fe;
+    color: #683B93;
+}
+
+/* ── Patient Cell in Table ─── */
+.patient-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.patient-avatar-sm {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #683B93, #a855f7);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.patient-name {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 13px;
+    display: block;
+}
+
+.patient-meta {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.blood-badge {
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid #fecaca;
+}
+
+.encounter-count {
+    background: #ede9fe;
+    color: #683B93;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.view-timeline-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff;
+    color: #683B93;
+    border: 1px solid #d8b4fe;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.view-timeline-btn:hover {
+    background: #683B93;
+    color: #fff;
+    border-color: #683B93;
+}
+
+/* ── Responsive ─── */
+@media (max-width: 768px) {
+    .ehr-stats-row {
+        grid-template-columns: 1fr;
+    }
+
+    .pending-item {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .dispense-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,558 @@
+/* =========================================================================
+   ADMIN PATIENT DETAILS – ENTERPRISE SPLIT-PANE REDESIGN
+   ========================================================================= */
+
+/* ─── Layout Architecture ─── */
+.enterprise-split-layout {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.split-layout-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    color: #64748B;
+    font-weight: 500;
+}
+
+/* =========================================================================
+   LEFT SIDEBAR (Profile Core)
+   ========================================================================= */
+.patient-sidebar {
+    width: 340px;
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 24px;
+    position: sticky;
+    top: 24px;
+    flex-shrink: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.sidebar-header {
+    margin-bottom: 24px;
+}
+
+.back-link {
+    background: transparent;
+    border: none;
+    color: #64748B;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #0F172A;
+}
+
+.sidebar-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #F1F5F9;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.sidebar-avatar {
+    width: 88px;
+    height: 88px;
+    background: #EEF2FF;
+    color: #4F46E5;
+    font-size: 32px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    border: 1px solid #E0E7FF;
+}
+
+.sidebar-profile h2 {
+    margin: 0 0 4px 0;
+    font-size: 20px;
+    color: #0F172A;
+    font-weight: 700;
+}
+
+.sidebar-id {
+    font-family: 'SF Mono', ui-monospace, monospace;
+    font-size: 12px;
+    color: #64748B;
+    margin-bottom: 12px;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+
+.status-badge.active {
+    background: #ECFDF5;
+    color: #059669;
+    border: 1px solid #A7F3D0;
+}
+
+.status-badge.pending {
+    background: #FFFBEB;
+    color: #D97706;
+    border: 1px solid #FDE68A;
+}
+
+/* Sidebar Sections */
+.sidebar-section {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.sidebar-section h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94A3B8;
+    margin: 0 0 16px 0;
+    font-weight: 700;
+}
+
+.sidebar-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.4;
+}
+
+.sidebar-info-item:last-child {
+    margin-bottom: 0;
+}
+
+.icon-subtle {
+    color: #94A3B8;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Vitals Grid */
+.vitals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.vital-box {
+    background: #F8FAFC;
+    border: 1px solid #F1F5F9;
+    padding: 10px 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.vital-label {
+    font-size: 11px;
+    color: #64748B;
+    font-weight: 600;
+}
+
+.vital-value {
+    font-size: 14px;
+    color: #0F172A;
+}
+
+.text-rose { color: #E11D48; }
+
+/* Sidebar Actions */
+.sidebar-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.action-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.action-btn.primary {
+    background: #4F46E5;
+    color: #ffffff;
+}
+.action-btn.primary:hover {
+    background: #4338CA;
+}
+
+.action-btn.secondary {
+    background: #ffffff;
+    border-color: #E2E8F0;
+    color: #475569;
+}
+.action-btn.secondary:hover {
+    background: #F8FAFC;
+    border-color: #CBD5E1;
+}
+
+/* =========================================================================
+   RIGHT MAIN CONTENT
+   ========================================================================= */
+.patient-main-content {
+    flex: 1;
+    min-width: 0; /* allows truncation inside if needed */
+}
+
+/* Minimalist Underline Tabs */
+.main-tabs-wrapper {
+    border-bottom: 1px solid #E2E8F0;
+    margin-bottom: 28px;
+}
+
+.main-tabs {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+}
+
+.main-tabs::-webkit-scrollbar { height: 0; }
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0 0 16px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #64748B;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: -1px; /* overlap the border */
+    white-space: nowrap;
+}
+
+.tab-btn:hover {
+    color: #0F172A;
+}
+
+.tab-btn.active {
+    color: #4F46E5;
+    border-bottom-color: #4F46E5;
+}
+
+.tab-count {
+    background: #F1F5F9;
+    color: #475569;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.tab-btn.active .tab-count {
+    background: #EEF2FF;
+    color: #4F46E5;
+}
+
+/* Overview Area */
+.section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 16px 0;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.metric-card {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.metric-label {
+    font-size: 13px;
+    color: #64748B;
+    font-weight: 600;
+}
+
+.metric-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0F172A;
+    letter-spacing: -0.5px;
+}
+
+.empty-sub {
+    background: #F8FAFC;
+    border: 1px dashed #CBD5E1;
+    border-radius: 12px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 500;
+}
+.empty-sub span {
+    font-size: 13px;
+    color: #94A3B8;
+    margin-top: 6px;
+}
+
+/* =========================================================================
+   ENTERPRISE TABLES
+   ========================================================================= */
+.enterprise-table-wrapper {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    overflow-x: auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.enterprise-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 600px;
+}
+
+.enterprise-table th {
+    padding: 14px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748B;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: #F8FAFC;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.enterprise-table td {
+    padding: 16px 20px;
+    font-size: 14px;
+    color: #334155;
+    border-bottom: 1px solid #F1F5F9;
+    vertical-align: middle;
+}
+
+.enterprise-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.enterprise-table tbody tr:hover {
+    background: #F8FAFC;
+}
+
+.td-flex {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.text-muted { color: #94A3B8; }
+.mono { font-family: 'SF Mono', monospace; }
+
+/* Truncate long chat messages */
+.msg-preview {
+    max-width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #475569;
+}
+
+/* =========================================================================
+   PILL BADGES
+   ========================================================================= */
+.pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.pill-outline { background: transparent; border: 1px solid #E2E8F0; color: #64748B; }
+.pill-blue { background: #EFF6FF; color: #2563EB; }
+.pill-gray { background: #F1F5F9; color: #475569; }
+.pill-green { background: #F0FDF4; color: #16A34A; }
+.pill-amber { background: #FFFBEB; color: #D97706; }
+.pill-indigo { background: #EEF2FF; color: #4F46E5; }
+
+/* =========================================================================
+   EHR CARDS GRID
+   ========================================================================= */
+.ehr-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.ehr-record-card {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.ehr-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.ehr-card-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0F172A;
+}
+
+.ehr-date {
+    font-size: 12px;
+    color: #64748B;
+    background: #F1F5F9;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.ehr-doc {
+    font-size: 13px;
+    color: #4F46E5;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+}
+
+.ehr-meds-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.med-item {
+    background: #F8FAFC;
+    border-left: 2px solid #4F46E5;
+    padding: 10px 12px;
+    border-radius: 0 6px 6px 0;
+}
+
+.med-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1E293B;
+    margin-bottom: 2px;
+}
+
+.med-details {
+    font-size: 12px;
+    color: #64748B;
+}
+
+.ehr-notes {
+    background: #FFFBEB;
+    border: 1px solid #FEF3C7;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.ehr-notes p {
+    margin: 0;
+    font-size: 13px;
+    color: #92400E;
+    line-height: 1.5;
+}
+
+/* =========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================= */
+@media (max-width: 1024px) {
+    .enterprise-split-layout {
+        flex-direction: column;
+    }
+    .patient-sidebar {
+        width: 100%;
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: flex-start;
+    }
+    .sidebar-header, .sidebar-profile, .sidebar-section, .sidebar-actions {
+        margin: 0; padding: 0; border: none;
+    }
+    .sidebar-header { grid-column: 1 / -1; margin-bottom: -10px; }
+    .sidebar-profile { align-items: flex-start; text-align: left; flex-direction: row; gap: 16px; grid-column: 1 / -1; border-bottom: 1px solid #F1F5F9; padding-bottom: 20px;}
+    .sidebar-avatar { margin: 0; width: 64px; height: 64px; font-size: 24px; }
+    .sidebar-actions { grid-column: 1 / -1; flex-direction: row; }
+}
+
+@media (max-width: 768px) {
+    .patient-sidebar {
+        grid-template-columns: 1fr;
+    }
+    .metrics-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}

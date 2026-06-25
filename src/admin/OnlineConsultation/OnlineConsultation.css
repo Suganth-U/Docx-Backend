@@ -1,0 +1,353 @@
+/* =========================================================================
+   ADMIN ONLINE CONSULTATION – PREMIUM REDESIGN 
+   ========================================================================= */
+
+.consultation-container {
+    padding: 0;
+}
+
+/* ── Header Icon Solid Purple Theme ─── */
+.bg-purple-solid {
+    background: linear-gradient(135deg, #683b93, #8b5fbf) !important;
+    box-shadow: 0 4px 10px rgba(104, 59, 147, 0.2);
+}
+
+.txt-white {
+    color: #ffffff !important;
+}
+
+/* ── Stats Row ─── */
+.consultation-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.consultation-stat-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.2s;
+}
+
+.consultation-stat-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+}
+
+.consultation-stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.consultation-stat-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.consultation-stat-card p {
+    font-size: 12px;
+    color: #94a3b8;
+    margin: 2px 0 0;
+    font-weight: 500;
+}
+
+/* ── Consultation List/Table Container ─── */
+.admin-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+}
+
+.filter-bar {
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) auto;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+    .filter-bar {
+        grid-template-columns: 1fr;
+    }
+}
+
+.search-box-wrapper {
+    position: relative;
+    display: block;
+}
+
+.search-box-wrapper svg {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8a7da2;
+}
+
+.search-box-wrapper input {
+    width: 100%;
+    min-height: 50px;
+    border-radius: 16px;
+    border: 1px solid rgba(104, 59, 147, 0.12);
+    background: #fbfaff;
+    padding: 0 16px 0 44px;
+    color: #281a43;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.search-box-wrapper input:focus {
+    border-color: #683B93;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(104,59,147,0.1);
+}
+
+.filter-dropdowns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fbfaff;
+    border: 1px solid rgba(104, 59, 147, 0.12);
+    border-radius: 12px;
+    padding: 0 14px;
+    height: 50px;
+    color: #5c5170;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.dropdown-container:hover {
+    border-color: rgba(104, 59, 147, 0.3);
+}
+
+.dropdown-container svg {
+    color: #683B93;
+}
+
+.dropdown-container select {
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 13px;
+    color: #281a43;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    width: 140px;
+}
+
+/* ── Simplified Card Display ─── */
+.consultation-list-grid {
+    display: grid;
+    gap: 16px;
+}
+
+.consultation-item-card {
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(104, 59, 147, 0.1);
+    background: #ffffff;
+    display: grid;
+    gap: 16px;
+    transition: all 0.2s;
+}
+
+.consultation-item-card:hover {
+    box-shadow: 0 6px 16px rgba(104, 59, 147, 0.06);
+    border-color: rgba(104, 59, 147, 0.2);
+}
+
+.consultation-top-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.consultation-top-row h2 {
+    margin: 0 0 4px;
+    color: #281a43;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.consultation-top-row p {
+    margin: 0;
+    color: #6e6484;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* ── Concise Info Row ─── */
+.concise-info-row {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fbf9fe;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(104, 59, 147, 0.05);
+}
+
+.info-segment {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4a5568;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.info-segment svg {
+    color: #683B93;
+}
+
+.info-segment strong {
+    color: #1a202c;
+    margin-right: 4px;
+}
+
+/* ── Link Editor Inline ─── */
+.link-editor-inline {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+    align-items: stretch;
+}
+
+.link-editor-inline input {
+    flex-grow: 1;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid rgba(104, 59, 147, 0.2);
+    background: #fbfaff;
+    padding: 0 14px;
+    color: #281a43;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.link-editor-inline input:focus {
+    border-color: #683B93;
+    box-shadow: 0 0 0 3px rgba(104,59,147,0.1);
+}
+
+.btn-primary {
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #683b93, #8b5fbf);
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(104, 59, 147, 0.3);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.meeting-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #683b93;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    background: #efe4ff;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.meeting-link:hover {
+    background: #e2cffe;
+    color: #4a2268;
+}
+
+.empty-state {
+    padding: 24px;
+    border-radius: 16px;
+    background: #fbf9fe;
+    border: 1px dashed rgba(104, 59, 147, 0.2);
+    color: #6d6283;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Action Notice */
+.action-notice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.action-notice.purple {
+    background: rgba(124, 58, 237, 0.08);
+    color: #6d28d9;
+    border: 1px solid rgba(124, 58, 237, 0.18);
+}
+
+.action-notice.green {
+    background: rgba(16, 185, 129, 0.08);
+    color: #0f9f67;
+    border: 1px solid rgba(16, 185, 129, 0.18);
+}

@@ -1,0 +1,197 @@
+.constarints{
+  width: 100vw;
+  height:max-content;
+  overflow-y: scroll;
+}
+.profile_container {
+    width: 80vw;
+    display: flex;
+    border-radius: 10px; 
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    margin-left: 20vw;
+    margin-top: 80px;
+    
+  }
+  
+  .profileleft,
+  .profileright {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  .profileleft {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .profileright {
+    width: 75%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .profileright h3 {
+    text-align: left;
+    margin-left: -2px;
+  }
+  
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  
+  .image_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+  }
+  
+  .image_container {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f3f4f6;
+    margin-bottom: 10px;
+  }
+  
+  .image_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .uploadbutton .btn{
+    width: 200px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  .uploadbutton .btn:hover{
+    opacity: 0.8;;
+  }
+  
+  .profileleft label {
+    align-self: flex-start;
+    font-size: 13px;
+    font-weight: bold;
+    color: #485b6b;
+  }
+  
+  .profileright label {
+    align-self: flex-start;
+    font-size: 15px;
+    font-weight: 400;
+    color: #485b6b;
+  }
+  
+  .profileleft input {
+    width: 90%; 
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  
+  .profileright input,
+  .profileright select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .profileleft button {
+    width: 90%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .profile_Infomation,
+  .Profile_contact {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  
+  .profile_Infomation_left,
+  .profile_Infomation_right,
+  .profile_contact_left,
+  .profile_contact_right {
+    width: 50%;
+  }
+  
+  .profileright select,
+  .profileright input {
+    margin-bottom: 15px;
+  }
+  
+  .other_information input {
+    display: flex;
+    width: 280px;
+  }
+  
+  .other_information select {
+    display: flex;
+    width: 300px;
+  }
+  
+  .userinfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+
+  }
+  
+  .userinfo .details{
+    margin-top: 10px;
+    padding: 2px;
+  }
+  
+  span {
+    font-size: 13px;
+    margin-left: 5px;
+  }
+  .update{
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #fefcfc;
+    border: 0.5px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+  }

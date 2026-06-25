@@ -1,0 +1,48 @@
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f8f9fa;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.navbar-wrapper {
+  flex-shrink: 0;
+  z-index: 20;
+}
+
+.content-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.75rem;
+}
+
+.content-scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content-scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content-scroll-area::-webkit-scrollbar-thumb {
+  background-color: #e5e7eb;
+  border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+  .content-scroll-area {
+    padding: 1rem;
+  }
+}

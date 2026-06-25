@@ -1,0 +1,7 @@
+/Applications/DocX/selenium-tests/src/test/java/com/docx/tests/AppointmentBookingTest.java
+/Applications/DocX/selenium-tests/src/test/java/com/docx/tests/PatientLoginTest.java
+/Applications/DocX/selenium-tests/src/test/java/com/docx/tests/SignupValidationTest.java
+/Applications/DocX/selenium-tests/src/test/java/com/docx/tests/base/BaseTest.java
+/Applications/DocX/selenium-tests/src/test/java/com/docx/tests/pages/AppointmentPage.java
+/Applications/DocX/selenium-tests/src/test/java/com/docx/tests/pages/LoginPage.java
+/Applications/DocX/selenium-tests/src/test/java/com/docx/tests/pages/SignupPage.java

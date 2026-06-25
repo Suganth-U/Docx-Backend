@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 7 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" class="navigator-link">
+              <span class="suite-name border-failed">DocX Automated UI Test Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-DocX_Automated_UI_Test_Suite" class="navigator-link ">
+                    <span>testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-DocX_Automated_UI_Test_Suite" class="navigator-link ">
+                    <span class="test-stats">2 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-DocX_Automated_UI_Test_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-DocX_Automated_UI_Test_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-DocX_Automated_UI_Test_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-DocX_Automated_UI_Test_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-DocX_Automated_UI_Test_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">16 methods, 7 failed,   9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" class="hide-methods failed suite-DocX_Automated_UI_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-DocX_Automated_UI_Test_Suite -->
+                      <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" class="show-methods failed suite-DocX_Automated_UI_Test_Suite"> (show)</a> <!-- show-methods failed suite-DocX_Automated_UI_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-DocX_Automated_UI_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.PatientLoginTest" class="method navigator-link" hash-for-method="testEmptyFormShowsValidation">testEmptyFormShowsValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.SignupValidationTest" class="method navigator-link" hash-for-method="testEmptyFormValidation">testEmptyFormValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.PatientLoginTest" class="method navigator-link" hash-for-method="testInvalidEmailFormat">testInvalidEmailFormat</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.SignupValidationTest" class="method navigator-link" hash-for-method="testInvalidEmailValidation">testInvalidEmailValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.SignupValidationTest" class="method navigator-link" hash-for-method="testPasswordMismatch">testPasswordMismatch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.PatientLoginTest" class="method navigator-link" hash-for-method="testShortPasswordValidation">testShortPasswordValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.SignupValidationTest" class="method navigator-link" hash-for-method="testWeakPasswordValidation">testWeakPasswordValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-DocX_Automated_UI_Test_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" class="hide-methods passed suite-DocX_Automated_UI_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-DocX_Automated_UI_Test_Suite -->
+                      <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" class="show-methods passed suite-DocX_Automated_UI_Test_Suite"> (show)</a> <!-- show-methods passed suite-DocX_Automated_UI_Test_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-DocX_Automated_UI_Test_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.AppointmentBookingTest" class="method navigator-link" hash-for-method="testAppointmentPageLoads">testAppointmentPageLoads</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.AppointmentBookingTest" class="method navigator-link" hash-for-method="testAppointmentWithDoctorParams">testAppointmentWithDoctorParams</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.PatientLoginTest" class="method navigator-link" hash-for-method="testDoctorLoginPageLoads">testDoctorLoginPageLoads</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.AppointmentBookingTest" class="method navigator-link" hash-for-method="testFaqPageLoads">testFaqPageLoads</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.AppointmentBookingTest" class="method navigator-link" hash-for-method="testFindDoctorsPageLoads">testFindDoctorsPageLoads</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.PatientLoginTest" class="method navigator-link" hash-for-method="testLoginPageLoads">testLoginPageLoads</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.AppointmentBookingTest" class="method navigator-link" hash-for-method="testPharmacyPageLoads">testPharmacyPageLoads</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.SignupValidationTest" class="method navigator-link" hash-for-method="testSignupPageLoads">testSignupPageLoads</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DocX_Automated_UI_Test_Suite" title="com.docx.tests.PatientLoginTest" class="method navigator-link" hash-for-method="testWrongCredentialsShowError">testWrongCredentialsShowError</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-DocX_Automated_UI_Test_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-DocX_Automated_UI_Test_Suite" class="panel DocX_Automated_UI_Test_Suite">
+          <div class="suite-DocX_Automated_UI_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.docx.tests.PatientLoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEmptyFormShowsValidation">
+                  </a> <!-- testEmptyFormShowsValidation -->
+                  <span class="method-name">testEmptyFormShowsValidation</span>
+                  <div class="stack-trace">java.lang.AssertionError: Inline validation error should appear when form is submitted empty expected [true] but found [false]
+	at com.docx.tests.PatientLoginTest.testEmptyFormShowsValidation(PatientLoginTest.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Submit empty form and verify inline validation errors appear)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testInvalidEmailFormat">
+                  </a> <!-- testInvalidEmailFormat -->
+                  <span class="method-name">testInvalidEmailFormat</span>
+                  <div class="stack-trace">java.lang.AssertionError: Field error should appear for an invalid email format expected [true] but found [false]
+	at com.docx.tests.PatientLoginTest.testInvalidEmailFormat(PatientLoginTest.java:72)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Enter invalid email format and verify validation message)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testShortPasswordValidation">
+                  </a> <!-- testShortPasswordValidation -->
+                  <span class="method-name">testShortPasswordValidation</span>
+                  <div class="stack-trace">java.lang.AssertionError: Field error should appear for a password that is too short expected [true] but found [false]
+	at com.docx.tests.PatientLoginTest.testShortPasswordValidation(PatientLoginTest.java:89)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Enter a short password and verify minimum-length validation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-DocX_Automated_UI_Test_Suite-class-failed -->
+          <div class="suite-DocX_Automated_UI_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.docx.tests.SignupValidationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEmptyFormValidation">
+                  </a> <!-- testEmptyFormValidation -->
+                  <span class="method-name">testEmptyFormValidation</span>
+                  <div class="stack-trace">java.lang.AssertionError: Validation errors should appear for empty form submission expected [true] but found [false]
+	at com.docx.tests.SignupValidationTest.testEmptyFormValidation(SignupValidationTest.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Submit empty signup form and verify validation errors)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testInvalidEmailValidation">
+                  </a> <!-- testInvalidEmailValidation -->
+                  <span class="method-name">testInvalidEmailValidation</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#signup\-firstName&quot;}
+  (Session info: chrome=149.0.7827.158)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.5&apos;, java.version: &apos;26.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [eea8a7e422179b43ca3bc920a27e1018, findElement {value=signup-firstName, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.158, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: /var/folders/_x/vtwm_77109l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49308}, goog:processID: 19782, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49308/devtoo..., se:cdpVersion: 149.0.7827.158, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eea8a7e422179b43ca3bc920a27e1018
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.docx.tests.pages.SignupPage.enterFirstName(SignupPage.java:40)
+	at com.docx.tests.SignupValidationTest.testInvalidEmailValidation(SignupValidationTest.java:62)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Enter invalid email and verify email validation error)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPasswordMismatch">
+                  </a> <!-- testPasswordMismatch -->
+                  <span class="method-name">testPasswordMismatch</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#signup\-firstName&quot;}
+  (Session info: chrome=149.0.7827.158)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.5&apos;, java.version: &apos;26.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ed9838de7c43b5b313b4dce4fd676de8, findElement {value=signup-firstName, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.158, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: /var/folders/_x/vtwm_77109l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49495}, goog:processID: 19802, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49495/devtoo..., se:cdpVersion: 149.0.7827.158, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ed9838de7c43b5b313b4dce4fd676de8
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.docx.tests.pages.SignupPage.enterFirstName(SignupPage.java:40)
+	at com.docx.tests.SignupValidationTest.testPasswordMismatch(SignupValidationTest.java:82)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Enter mismatched passwords and verify error)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWeakPasswordValidation">
+                  </a> <!-- testWeakPasswordValidation -->
+                  <span class="method-name">testWeakPasswordValidation</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#signup\-firstName&quot;}
+  (Session info: chrome=149.0.7827.158)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.5&apos;, java.version: &apos;26.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9e076a876a5ea42195a78443a7f5163b, findElement {value=signup-firstName, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.158, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: /var/folders/_x/vtwm_77109l...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49679}, goog:processID: 19816, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49679/devtoo..., se:cdpVersion: 149.0.7827.158, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9e076a876a5ea42195a78443a7f5163b
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.docx.tests.pages.SignupPage.enterFirstName(SignupPage.java:40)
+	at com.docx.tests.SignupValidationTest.testWeakPasswordValidation(SignupValidationTest.java:102)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Enter a weak password and verify strength validation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-DocX_Automated_UI_Test_Suite-class-failed -->
+          <div class="suite-DocX_Automated_UI_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.docx.tests.AppointmentBookingTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAppointmentPageLoads">
+                  </a> <!-- testAppointmentPageLoads -->
+                  <span class="method-name">testAppointmentPageLoads</span>
+                  <em>
+(Verify the appointment booking page loads)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAppointmentWithDoctorParams">
+                  </a> <!-- testAppointmentWithDoctorParams -->
+                  <span class="method-name">testAppointmentWithDoctorParams</span>
+                  <em>
+(Open appointment page with doctor query params and verify it loads)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFaqPageLoads">
+                  </a> <!-- testFaqPageLoads -->
+                  <span class="method-name">testFaqPageLoads</span>
+                  <em>
+(Verify FAQ page loads correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFindDoctorsPageLoads">
+                  </a> <!-- testFindDoctorsPageLoads -->
+                  <span class="method-name">testFindDoctorsPageLoads</span>
+                  <em>
+(Verify find-doctors page loads (pre-booking entry point))                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPharmacyPageLoads">
+                  </a> <!-- testPharmacyPageLoads -->
+                  <span class="method-name">testPharmacyPageLoads</span>
+                  <em>
+(Verify pharmacy page loads (e-pharmacy entry point))                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-DocX_Automated_UI_Test_Suite-class-passed -->
+          <div class="suite-DocX_Automated_UI_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.docx.tests.PatientLoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDoctorLoginPageLoads">
+                  </a> <!-- testDoctorLoginPageLoads -->
+                  <span class="method-name">testDoctorLoginPageLoads</span>
+                  <em>
+(Verify doctor login page loads with ?role=doctor param)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoginPageLoads">
+                  </a> <!-- testLoginPageLoads -->
+                  <span class="method-name">testLoginPageLoads</span>
+                  <em>
+(Verify the login page loads and the email field is visible)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWrongCredentialsShowError">
+                  </a> <!-- testWrongCredentialsShowError -->
+                  <span class="method-name">testWrongCredentialsShowError</span>
+                  <em>
+(Submit wrong credentials and verify an error modal appears)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-DocX_Automated_UI_Test_Suite-class-passed -->
+          <div class="suite-DocX_Automated_UI_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.docx.tests.SignupValidationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupPageLoads">
+                  </a> <!-- testSignupPageLoads -->
+                  <span class="method-name">testSignupPageLoads</span>
+                  <em>
+(Verify signup page loads and form fields are visible)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-DocX_Automated_UI_Test_Suite-class-passed -->
+        </div> <!-- panel DocX_Automated_UI_Test_Suite -->
+        <div panel-name="test-xml-DocX_Automated_UI_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Applications/DocX/selenium-tests/src/test/resources/testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;DocX Automated UI Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Authentication Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.docx.tests.PatientLoginTest&quot;/&gt;
+      &lt;class name=&quot;com.docx.tests.SignupValidationTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Authentication Tests --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Booking and Navigation Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.docx.tests.AppointmentBookingTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Booking and Navigation Tests --&gt;
+&lt;/suite&gt; &lt;!-- DocX Automated UI Test Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-DocX_Automated_UI_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for DocX Automated UI Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Authentication Tests (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Booking and Navigation Tests (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-DocX_Automated_UI_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for DocX Automated UI Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-DocX_Automated_UI_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for DocX Automated UI Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_DocX_Automated_UI_Test_Suite');
+function tableData_DocX_Automated_UI_Test_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(16);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testInvalidEmailFormat')
+data.setCell(0, 2, 'com.docx.tests.PatientLoginTest')
+data.setCell(0, 3, 11834);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testEmptyFormValidation')
+data.setCell(1, 2, 'com.docx.tests.SignupValidationTest')
+data.setCell(1, 3, 11547);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testShortPasswordValidation')
+data.setCell(2, 2, 'com.docx.tests.PatientLoginTest')
+data.setCell(2, 3, 11534);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testWeakPasswordValidation')
+data.setCell(3, 2, 'com.docx.tests.SignupValidationTest')
+data.setCell(3, 3, 11497);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testInvalidEmailValidation')
+data.setCell(4, 2, 'com.docx.tests.SignupValidationTest')
+data.setCell(4, 3, 11392);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testEmptyFormShowsValidation')
+data.setCell(5, 2, 'com.docx.tests.PatientLoginTest')
+data.setCell(5, 3, 11391);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testPasswordMismatch')
+data.setCell(6, 2, 'com.docx.tests.SignupValidationTest')
+data.setCell(6, 3, 11263);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testPharmacyPageLoads')
+data.setCell(7, 2, 'com.docx.tests.AppointmentBookingTest')
+data.setCell(7, 3, 4042);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testWrongCredentialsShowError')
+data.setCell(8, 2, 'com.docx.tests.PatientLoginTest')
+data.setCell(8, 3, 3684);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testFindDoctorsPageLoads')
+data.setCell(9, 2, 'com.docx.tests.AppointmentBookingTest')
+data.setCell(9, 3, 3448);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testFaqPageLoads')
+data.setCell(10, 2, 'com.docx.tests.AppointmentBookingTest')
+data.setCell(10, 3, 3352);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testLoginPageLoads')
+data.setCell(11, 2, 'com.docx.tests.PatientLoginTest')
+data.setCell(11, 3, 3194);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testAppointmentWithDoctorParams')
+data.setCell(12, 2, 'com.docx.tests.AppointmentBookingTest')
+data.setCell(12, 3, 1379);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testAppointmentPageLoads')
+data.setCell(13, 2, 'com.docx.tests.AppointmentBookingTest')
+data.setCell(13, 3, 1339);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testSignupPageLoads')
+data.setCell(14, 2, 'com.docx.tests.SignupValidationTest')
+data.setCell(14, 3, 1300);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testDoctorLoginPageLoads')
+data.setCell(15, 2, 'com.docx.tests.PatientLoginTest')
+data.setCell(15, 3, 1266);
+window.suiteTableData['DocX_Automated_UI_Test_Suite']= { tableData: data, tableDiv: 'times-div-DocX_Automated_UI_Test_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-DocX_Automated_UI_Test_Suite">
+              </div> <!-- times-div-DocX_Automated_UI_Test_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-DocX_Automated_UI_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for DocX Automated UI Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-DocX_Automated_UI_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">2 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.docx.tests.PatientLoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testSuccessfulLoginRedirects</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.docx.tests.SignupValidationTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setupDriverBinary</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-DocX_Automated_UI_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.docx.tests.AppointmentBookingTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setupDriverBinary</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.docx.tests.PatientLoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">480 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">3388 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLoginPageLoads</span>
+                <span class="method-start">3391 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">6586 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">6724 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testEmptyFormShowsValidation</span>
+                <span class="method-start">7694 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">7694 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">19093 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">19229 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">20114 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testInvalidEmailFormat</span>
+                <span class="method-start">20115 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">31952 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">32091 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">33152 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testShortPasswordValidation</span>
+                <span class="method-start">33153 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">44690 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">44822 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">45717 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testWrongCredentialsShowError</span>
+                <span class="method-start">45718 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">49405 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">49537 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">50473 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testDoctorLoginPageLoads</span>
+                <span class="method-start">50474 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">51741 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.docx.tests.SignupValidationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">51872 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">52773 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSignupPageLoads</span>
+                <span class="method-start">52775 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">54076 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">54198 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">54880 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testEmptyFormValidation</span>
+                <span class="method-start">54880 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">66431 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">66566 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testInvalidEmailValidation</span>
+                <span class="method-start">67598 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">67598 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">78995 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">79127 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">80089 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testPasswordMismatch</span>
+                <span class="method-start">80090 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">91361 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">91492 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testWeakPasswordValidation</span>
+                <span class="method-start">92308 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">92308 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">103809 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.docx.tests.AppointmentBookingTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">104002 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">105149 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testAppointmentPageLoads</span>
+                <span class="method-start">105150 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">106490 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">106616 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">107414 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testAppointmentWithDoctorParams</span>
+                <span class="method-start">107414 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">108794 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">108919 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testFindDoctorsPageLoads</span>
+                <span class="method-start">109898 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">109898 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">113354 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">113487 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">115001 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testPharmacyPageLoads</span>
+                <span class="method-start">115002 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">119045 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">119185 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testFaqPageLoads</span>
+                <span class="method-start">120135 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initPage</span>
+                <span class="method-start">120135 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">123488 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

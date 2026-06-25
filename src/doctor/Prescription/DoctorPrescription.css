@@ -1,0 +1,189 @@
+/* DoctorPrescription.css */
+
+.prescription-page {
+    padding: 24px;
+    background: #f9fafb;
+    min-height: 100vh;
+}
+
+/* Reusing some header/filter styles via shared classes if possible, 
+   but defining specific ones here for safety */
+
+.btn-filter-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    padding: 10px 16px;
+    border-radius: 10px;
+    color: #4b5563;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-filter-icon:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+}
+
+.card-table {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modern-table thead {
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.modern-table th {
+    text-align: left;
+    padding: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.modern-table td {
+    padding: 16px;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 14px;
+    color: #1f2937;
+    vertical-align: middle;
+}
+
+.modern-table tbody tr:hover {
+    background: #fdfdfd;
+}
+
+.id-cell {
+    font-family: monospace;
+    font-weight: 600;
+    color: #9481ff; /* Hero Purple */
+}
+
+.patient-info-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.patient-initial {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f3e8ff; /* Light purple */
+    color: #7c3aed; /* Dark purple */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.info-name {
+    display: block;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.info-id {
+    display: block;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.diagnosis-tag {
+    background: #f3f4f6;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #374151;
+    font-weight: 500;
+}
+
+.meds-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4b5563;
+}
+
+.meds-icon {
+    color: #9ca3af;
+}
+
+.truncate-text {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.status-pill {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-active {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+
+.status-completed {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-action-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-action-sm.view {
+    background: #f3e8ff;
+    color: #9481ff;
+}
+
+.btn-action-sm.view:hover {
+    background: #e9d5ff; /* Slightly darker light purple */
+}
+
+.btn-action-sm.download {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+.btn-action-sm.download:hover {
+    background: #e5e7eb;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #6b7280;
+}

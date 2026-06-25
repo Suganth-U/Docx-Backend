@@ -1,0 +1,289 @@
+/* AdminDashboard.css */
+/* Core Layout */
+.admin-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+    /* Solid white background */
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+.admin-sidebar {
+    display: none;
+    /* Mobile first hidden */
+    height: 100%;
+    flex-shrink: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 992px) {
+
+    /* Tablet/Desktop breakpoint */
+    .admin-sidebar {
+        display: block;
+        width: 250px;
+    }
+}
+
+.admin-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.admin-navbar {
+    flex-shrink: 0;
+    z-index: 20;
+}
+
+.admin-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .admin-content {
+        padding: 1rem;
+    }
+}
+
+.admin-page-content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Custom Scrollbar */
+.admin-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.admin-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.admin-content::-webkit-scrollbar-thumb {
+    background-color: #e5e7eb;
+    border-radius: 20px;
+}
+
+/* --- Shared Components --- */
+
+/* Cards */
+.admin-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f0f0f0;
+    margin-bottom: 20px;
+}
+
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.page-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #272b41;
+    margin: 0 0 5px 0;
+}
+
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #757575;
+}
+
+.breadcrumb a {
+    color: #757575;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #00D0F1;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #00D0F1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+    font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+    background-color: #00b8e6;
+}
+
+/* Filters */
+.filter-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.search-group {
+    display: flex;
+    align-items: center;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 0 12px;
+    width: 300px;
+}
+
+.search-icon {
+    color: #9ca3af;
+}
+
+.search-group input {
+    border: none;
+    background: transparent;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    color: #374151;
+}
+
+.form-select {
+    padding: 10px 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    color: #374151;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Tables */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 15px;
+    background-color: #f9fafb;
+    color: #374151;
+    font-weight: 600;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f3f4f6;
+    vertical-align: middle;
+    color: #4b5563;
+}
+
+.admin-table tr:hover {
+    background-color: #fefefe;
+}
+
+/* User Profile in Table */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name {
+    font-weight: 500;
+    color: #1f2937;
+    display: block;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.action-btn.edit {
+    color: #00D0F1;
+}
+
+.action-btn.edit:hover {
+    background-color: rgba(0, 208, 241, 0.1);
+}
+
+.action-btn.delete {
+    color: #e63c3c;
+}
+
+.action-btn.delete:hover {
+    background-color: rgba(230, 60, 60, 0.1);
+}
+
+/* Badges */
+.badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.badge.active,
+.badge.paid {
+    background-color: rgba(15, 183, 107, 0.12);
+    color: #26af48;
+}
+
+.badge.inactive,
+.badge.cancelled,
+.badge.failed {
+    background-color: rgba(255, 0, 0, 0.12);
+    color: #e63c3c;
+}
+
+.badge.pending {
+    background-color: rgba(255, 152, 0, 0.12);
+    color: #f39c12;
+}

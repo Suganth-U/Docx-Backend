@@ -1,0 +1,294 @@
+/* =========================================================================
+   ADMIN APPOINTMENTS MANAGEMENT - PREMIUM DESIGN
+   ========================================================================= */
+
+/* Header Icon */
+.appt-icon-wrapper {
+    background: linear-gradient(135deg, #683b93, #8b5fbf);
+    box-shadow: 0 4px 10px rgba(104, 59, 147, 0.2);
+}
+
+.appt-icon {
+    color: #ffffff;
+}
+
+/* ── Stats Row ── */
+.appt-stats-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.appt-stat-card {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #f3f4f6;
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: all 0.2s;
+}
+
+.appt-stat-card:hover {
+    border-color: #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.appt-stat-num {
+    font-size: 26px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.appt-stat-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.appt-stat-card.st-pending .appt-stat-num {
+    color: #d97706;
+}
+
+.appt-stat-card.st-confirmed .appt-stat-num {
+    color: #2563eb;
+}
+
+.appt-stat-card.st-completed .appt-stat-num {
+    color: #059669;
+}
+
+.appt-stat-card.st-cancelled .appt-stat-num {
+    color: #dc2626;
+}
+
+.appt-stat-card.st-expired .appt-stat-num {
+    color: #7c2d12;
+}
+
+.appt-stat-card.st-pending {
+    border-left: 3px solid #d97706;
+}
+
+.appt-stat-card.st-confirmed {
+    border-left: 3px solid #2563eb;
+}
+
+.appt-stat-card.st-completed {
+    border-left: 3px solid #059669;
+}
+
+.appt-stat-card.st-cancelled {
+    border-left: 3px solid #dc2626;
+}
+
+.appt-stat-card.st-expired {
+    border-left: 3px solid #7c2d12;
+}
+
+/* ── Tab Counts ── */
+.tab-count {
+    background: #111827;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 1px 7px;
+    font-size: 11px;
+    margin-left: 6px;
+    font-weight: 700;
+}
+
+/* ── Avatar ── */
+.appt-avatar {
+    background: linear-gradient(135deg, #683b93, #4a2268) !important;
+    color: #ffffff !important;
+}
+
+/* ── Doctor Cell ── */
+.appt-doc-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.appt-doc-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.appt-doc-spec {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.appt-doc-spec svg {
+    stroke: #6b7280;
+}
+
+/* ── Hospital Badge ── */
+.appt-hospital-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    background: #f3e8fc;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #683b93;
+    text-transform: uppercase;
+}
+
+.appt-hospital-badge svg {
+    stroke: #6b7280;
+}
+
+/* ── Date & Time Cell ── */
+.appt-datetime {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.appt-date,
+.appt-time {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #111827;
+    font-weight: 500;
+}
+
+.appt-time {
+    color: #6b7280;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.appt-date svg,
+.appt-time svg {
+    stroke: #9ca3af;
+}
+
+/* ── Type Badge ── */
+.appt-type-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.appt-type-badge.physical {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.appt-type-badge.virtual {
+    background: #eef2ff;
+    color: #4338ca;
+}
+
+.appt-type-badge svg {
+    width: 12px;
+    height: 12px;
+}
+
+.token-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: #9ca3af;
+    margin-left: 2px;
+}
+
+/* ── Payment Badge ── */
+.appt-payment-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.appt-payment-badge.paid {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.appt-payment-badge.unpaid {
+    background: #fffbeb;
+    color: #d97706;
+}
+
+.fee-amount {
+    font-size: 11px;
+    font-weight: 700;
+    color: inherit;
+    opacity: 0.7;
+    margin-left: 4px;
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.status-pill.pending {
+    background: #fffbeb;
+    color: #d97706;
+}
+
+.status-pill.confirmed {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.status-pill.completed {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.status-pill.cancelled {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.status-pill.expired {
+    background: #fff7ed;
+    color: #7c2d12;
+}
+
+.appt-status-reason {
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 12px;
+    color: #374151;
+    line-height: 1.4;
+}
+
+.appt-status-reason span {
+    color: #9ca3af;
+    font-size: 11px;
+    text-transform: capitalize;
+}

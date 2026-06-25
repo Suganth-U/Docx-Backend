@@ -1,0 +1,43 @@
+.portfolio-main {
+    background: linear-gradient(rgba(8, 8, 8, 0.419), rgba(8, 8, 8, 0.419)),
+      url("/assets/app/portfolio-main.jpg");
+    width: 100%;
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+  }
+  .portfolio-header .icon-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 30px 0;
+    opacity: 0.6;
+  background: transparent;
+  color: #fff;
+
+
+  }
+  .portfolio-header .icon-container img {
+    width: 20px;
+  }
+  .portfolio-header h1 {
+    font-size: 60px;
+    line-height: 1.3;
+    font-weight: 300;
+    text-align: center;
+  }
+  .portfolio-header h2 {
+    font-size: 18px;
+    /* line-height: 1.4; */
+  }
+  .portfolio-header img {
+    width: 20px;
+    line-height: 1.4;
+    margin-right: 10px;
+  }

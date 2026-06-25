@@ -1,0 +1,619 @@
+.health-assistant {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 20000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.health-assistant__launcher {
+  border: none;
+  border-radius: 999px;
+  padding: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #8376bc 0%, #5a4d8c 100%);
+  box-shadow: 0 24px 40px rgba(107, 92, 165, 0.35);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  overflow: hidden;
+  max-width: 58px; /* Roughly icon width + padding */
+  white-space: nowrap;
+}
+
+.health-assistant__launcher:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 28px 44px rgba(107, 92, 165, 0.45);
+  max-width: 200px;
+  padding: 12px 16px 12px 12px;
+}
+
+.health-assistant__launcher-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: none;
+}
+
+.health-assistant__launcher:hover .health-assistant__launcher-content {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.health-assistant__launcher-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.health-assistant__launcher--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.health-assistant__panel {
+  width: min(390px, calc(100vw - 24px));
+  max-height: min(680px, calc(100vh - 110px));
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgba(131, 118, 188, 0.2), transparent 35%),
+    linear-gradient(180deg, rgba(246, 242, 255, 0.98) 0%, rgba(255, 255, 255, 0.98) 100%);
+  border: 1px solid rgba(107, 92, 165, 0.18);
+  box-shadow: 0 30px 70px rgba(90, 77, 140, 0.26);
+  backdrop-filter: blur(16px);
+}
+
+.health-assistant__header {
+  padding: 24px 24px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  background: linear-gradient(145deg, #6b5ca5 0%, #8376bc 100%);
+  color: #fff;
+}
+
+.health-assistant__eyebrow {
+  display: inline-flex;
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.health-assistant__header h3 {
+  margin: 0 0 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.health-assistant__header p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.health-assistant__title-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.health-assistant__avatar {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.health-assistant__header-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.health-assistant__delete-btn,
+.health-assistant__close-btn {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  padding: 9px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.92);
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.health-assistant__delete-btn:hover:not(:disabled),
+.health-assistant__close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.health-assistant__delete-btn {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.health-assistant__delete-btn:hover:not(:disabled) {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.health-assistant__delete-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.health-assistant__messages {
+  padding: 18px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: linear-gradient(180deg, rgba(249, 247, 255, 0.94), rgba(255, 255, 255, 0.9));
+}
+
+.health-assistant__toast {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(56, 48, 83, 0.96);
+  color: #fff;
+  box-shadow: 0 18px 34px rgba(46, 38, 73, 0.28);
+  border: 1px solid rgba(131, 118, 188, 0.32);
+  backdrop-filter: blur(12px);
+}
+
+.health-assistant__toast-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffb8b8;
+}
+
+.health-assistant__toast-content {
+  min-width: 0;
+}
+
+.health-assistant__toast-content strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.health-assistant__toast-content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.health-assistant__toast-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.health-assistant__toast-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 9px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.health-assistant__toast-btn:hover {
+  transform: translateY(-1px);
+}
+
+.health-assistant__toast-btn--ghost {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.health-assistant__toast-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.health-assistant__toast-btn--danger {
+  background: linear-gradient(135deg, #ff7a7a 0%, #ef4444 100%);
+  color: #fff;
+}
+
+.health-assistant__toast-btn--danger:hover {
+  background: linear-gradient(135deg, #ff8c8c 0%, #f05252 100%);
+}
+
+.health-assistant__message {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.health-assistant__message--user {
+  align-items: flex-end;
+}
+
+.health-assistant__message--assistant {
+  align-items: flex-start;
+}
+
+.health-assistant__message-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b5ca5;
+}
+
+.health-assistant__message-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(107, 92, 165, 0.16), rgba(90, 77, 140, 0.28));
+  color: #5a4d8c;
+  box-shadow: 0 8px 18px rgba(90, 77, 140, 0.16);
+}
+
+.health-assistant__mode-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: rgba(107, 92, 165, 0.08);
+  border: 1px solid rgba(107, 92, 165, 0.14);
+  color: #6b5ca5;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.health-assistant__bubble {
+  max-width: 92%;
+  border-radius: 18px;
+  padding: 14px 15px;
+  box-shadow: 0 14px 28px rgba(107, 92, 165, 0.08);
+}
+
+.health-assistant__message--assistant .health-assistant__bubble {
+  background: #fff;
+  color: #383053;
+  border: 1px solid rgba(107, 92, 165, 0.12);
+}
+
+.health-assistant__message--user .health-assistant__bubble {
+  background: linear-gradient(135deg, #6b5ca5 0%, #8376bc 100%);
+  color: #fff;
+}
+
+.health-assistant__bubble p {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-size: 14px;
+  color: inherit;
+}
+
+.health-assistant__urgency {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.health-assistant__urgency--urgent {
+  background: rgba(255, 181, 91, 0.18);
+  color: #a35300;
+}
+
+.health-assistant__urgency--emergency {
+  background: rgba(227, 87, 87, 0.15);
+  color: #b22222;
+}
+
+.health-assistant__specialties,
+.health-assistant__actions,
+.health-assistant__quick-replies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 95%;
+}
+
+.health-assistant__specialty-card,
+.health-assistant__action,
+.health-assistant__quick-reply {
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+
+.health-assistant__specialty-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(107, 92, 165, 0.1);
+  color: #5a4d8c;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.health-assistant__action {
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: #6b5ca5;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 12px 24px rgba(90, 77, 140, 0.18);
+}
+
+.health-assistant__action:hover {
+  transform: translateY(-1px);
+}
+
+.health-assistant__action[data-type="specialty"] {
+  background: linear-gradient(135deg, #f3edff 0%, #e7dcff 100%);
+  color: #5a4d8c;
+  box-shadow: none;
+}
+
+.health-assistant__action[data-type="booking"] {
+  background: linear-gradient(135deg, #6b5ca5 0%, #8376bc 100%);
+}
+
+.health-assistant__action[data-type="virtual"] {
+  background: linear-gradient(135deg, #5a4d8c 0%, #6b5ca5 100%);
+}
+
+.health-assistant__action[data-type="pharmacy"],
+.health-assistant__action[data-type="prescription"] {
+  background: linear-gradient(135deg, #5a4d8c 0%, #6b5ca5 100%);
+}
+
+.health-assistant__action[data-type="directory"] {
+  background: #fff;
+  color: #5a4d8c;
+  border: 1px solid rgba(107, 92, 165, 0.18);
+  box-shadow: none;
+}
+
+.health-assistant__quick-reply {
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(107, 92, 165, 0.18);
+  color: #6b5ca5;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.health-assistant__quick-reply:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.health-assistant__typing {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(107, 92, 165, 0.08);
+  color: #5a4d8c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.health-assistant__spinner {
+  animation: health-assistant-spin 1s linear infinite;
+}
+
+.health-assistant__composer {
+  padding: 16px 18px 18px;
+  border-top: 1px solid rgba(107, 92, 165, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.health-assistant__composer textarea {
+  width: 100%;
+  resize: none;
+  border: 1px solid rgba(107, 92, 165, 0.18);
+  border-radius: 18px;
+  padding: 14px 15px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #383053;
+  background: #fff;
+  outline: none;
+}
+
+.health-assistant__composer textarea:focus {
+  border-color: rgba(90, 77, 140, 0.55);
+  box-shadow: 0 0 0 4px rgba(90, 77, 140, 0.08);
+}
+
+.health-assistant__composer-footer {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.health-assistant__composer-footer span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8376bc;
+}
+
+.health-assistant__composer-footer button {
+  border: none;
+  border-radius: 999px;
+  padding: 11px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #6b5ca5 0%, #8376bc 100%);
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.health-assistant__composer-footer button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@keyframes health-assistant-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .health-assistant {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .health-assistant__panel {
+    width: calc(100vw - 24px);
+    max-height: calc(100vh - 88px);
+    border-radius: 22px;
+  }
+
+  .health-assistant__launcher {
+    padding: 13px 16px 13px 13px;
+  }
+
+  .health-assistant__header {
+    padding: 18px 16px 14px;
+  }
+
+  .health-assistant__title-area {
+    gap: 12px;
+  }
+
+  .health-assistant__header-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .health-assistant__delete-btn,
+  .health-assistant__close-btn {
+    justify-content: center;
+  }
+
+  .health-assistant__messages {
+    padding: 14px;
+  }
+
+  .health-assistant__toast {
+    padding: 12px;
+  }
+
+  .health-assistant__toast-actions {
+    flex-direction: column-reverse;
+  }
+
+  .health-assistant__toast-btn {
+    width: 100%;
+  }
+
+  .health-assistant__composer {
+    padding: 14px;
+  }
+
+  .health-assistant__composer-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .health-assistant__composer-footer button {
+    justify-content: center;
+    width: 100%;
+  }
+}

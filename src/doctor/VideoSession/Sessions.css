@@ -1,0 +1,226 @@
+/* Sessions.css */
+
+.schedule-page {
+    padding: 24px;
+    background: #f9fafb;
+    min-height: 100vh;
+}
+
+.schedule-container {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.schedule-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.date-selector {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #4b5563;
+}
+
+.nav-btn:hover {
+    background: #f9fafb;
+}
+
+.date-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.text-blue {
+    color: #9481ff; /* Hero Purple */
+}
+
+.view-toggles {
+    display: flex;
+    background: #f3f4f6;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.view-btn {
+    padding: 6px 16px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.view-btn.active {
+    background: white;
+    color: #1f2937;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Timeline */
+.timeline-view {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.time-slot {
+    display: flex;
+    gap: 24px;
+}
+
+.slot-time {
+    width: 80px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 8px;
+}
+
+.time-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.duration-text {
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+.slot-card {
+    flex: 1;
+    display: flex;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.slot-card:hover {
+    border-color: #9481ff;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.slot-indicator {
+    width: 6px;
+    background: #9481ff; /* Hero Purple */
+}
+
+.indicator-gray {
+    background: #9ca3af;
+}
+
+.indicator-blue {
+    background: #9481ff; /* Hero Purple */
+}
+
+.slot-content {
+    flex: 1;
+    padding: 16px;
+}
+
+.slot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.slot-header h4 {
+    margin: 0;
+    font-size: 15px;
+    color: #1f2937;
+}
+
+.more-btn {
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+}
+
+.slot-details {
+    display: flex;
+    gap: 12px;
+}
+
+.detail-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #6b7280;
+    background: #f3f4f6;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.status-tag {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-upcoming {
+    color: #0369a1;
+}
+
+.slot-card.empty-slot {
+    border: 1px dashed #e5e7eb;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 60px;
+    background: #f9fafb;
+}
+
+.empty-slot span {
+    color: #9ca3af;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.add-btn-sm {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    border: none;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-btn-sm:hover {
+    background: #3b82f6;
+    color: white;
+}

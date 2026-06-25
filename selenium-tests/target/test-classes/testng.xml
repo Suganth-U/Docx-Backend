@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+  DocX E-Hospital – Automated UI Test Suite
+  ==========================================
+  Framework  : Selenium WebDriver 4 + TestNG 7
+  Browser    : Google Chrome (via WebDriverManager)
+  Scope      : Patient Login, Signup Validation, Appointment Booking
+
+  Run with   : mvn clean test
+  Prerequisite: DocX dev server must be running on http://localhost:5173
+-->
+<suite name="DocX Automated UI Test Suite" verbose="1" parallel="false">
+
+    <test name="Authentication Tests">
+        <classes>
+            <class name="com.docx.tests.PatientLoginTest" />
+            <class name="com.docx.tests.SignupValidationTest" />
+        </classes>
+    </test>
+
+    <test name="Booking and Navigation Tests">
+        <classes>
+            <class name="com.docx.tests.AppointmentBookingTest" />
+        </classes>
+    </test>
+
+</suite>

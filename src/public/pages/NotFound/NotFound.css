@@ -1,0 +1,153 @@
+/* =========================================================================
+   404 PAGE - Split 3D Layout (Reference Design)
+   ========================================================================= */
+
+   .notfound-page-wrapper {
+    min-height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    font-family: inherit;
+    /* Optional edge gradient to frame the page gently */
+    background: radial-gradient(circle at 100% 100%, rgba(82, 183, 136, 0.08) 0%, rgba(255,255,255,0) 50%);
+}
+
+.notfound-split-layout {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* ─── LEFT: Text Content ─── */
+.notfound-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+    /* Slight rotation angle from refernece image to mimic perspective if desired, 
+       but flat UI is typically better for actual implementation. Keeping flat. */
+}
+
+.notfound-brand {
+    margin-bottom: 60px;
+}
+
+.notfound-logo {
+    height: 40px;
+    object-fit: contain;
+}
+
+.notfound-heading {
+    font-size: 72px;
+    font-weight: 800;
+    color: #374151; /* Dark grey for "this page isn't available" */
+    line-height: 1.1;
+    margin: 0 0 30px 0;
+    letter-spacing: -1.5px;
+}
+
+.text-highlight {
+    color: #4ade80; /* Vibrant green from the reference image */
+}
+
+.notfound-subtext {
+    font-size: 24px;
+    color: #6b7280;
+    margin: 0 0 40px 0;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.notfound-links {
+    font-size: 18px;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+.link-highlight {
+    color: #4ade80; /* Matching green link text */
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.link-highlight:hover {
+    color: #22c55e;
+    text-decoration: underline;
+}
+
+/* ─── RIGHT: 3D Illustration ─── */
+.notfound-illustration-col {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notfound-3d-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    /* Soft floating animation for the 3D asset */
+    animation: float3D 6s ease-in-out infinite;
+    filter: drop-shadow(0 30px 40px rgba(0,0,0,0.08));
+}
+
+@keyframes float3D {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(1deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* ─── Responsive Adjustments ─── */
+@media (max-width: 1024px) {
+    .notfound-heading {
+        font-size: 56px;
+    }
+    .notfound-subtext {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .notfound-page-wrapper {
+        padding: 30px 20px;
+    }
+    
+    .notfound-split-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .notfound-text-content {
+        padding-right: 0;
+        align-items: center;
+    }
+
+    .notfound-brand {
+        margin-bottom: 40px;
+    }
+
+    .notfound-heading {
+        font-size: 48px;
+    }
+
+    .notfound-subtext {
+        font-size: 18px;
+    }
+
+    .notfound-illustration-col {
+        order: -1; /* Move illustration to top on mobile */
+    }
+
+    .notfound-3d-img {
+        max-width: 80%;
+    }
+}

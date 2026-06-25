@@ -1,0 +1,254 @@
+/* =========================================================================
+   ADMIN PAYMENTS MANAGEMENT – PREMIUM REDESIGN 
+   ========================================================================= */
+
+.payments-container {
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    min-height: calc(100vh - 120px);
+}
+
+/* ── Header Icon Solid Purple Theme ─── */
+.bg-purple-solid {
+    background: linear-gradient(135deg, #683b93, #8b5fbf) !important;
+    box-shadow: 0 4px 10px rgba(104, 59, 147, 0.2);
+}
+
+.txt-white {
+    color: #ffffff !important;
+}
+
+/* ── Stats Row ─── */
+.payments-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.payments-stat-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.2s;
+}
+
+.payments-stat-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+}
+
+.payments-stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.payments-stat-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.payments-stat-card p {
+    font-size: 12px;
+    color: #94a3b8;
+    margin: 2px 0 0;
+    font-weight: 500;
+}
+
+/* ── Table Container ─── */
+.admin-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+}
+
+.filter-bar {
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) auto;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+    .filter-bar {
+        grid-template-columns: 1fr;
+    }
+}
+
+.search-box-wrapper {
+    position: relative;
+    display: block;
+}
+
+.search-box-wrapper svg {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8a7da2;
+}
+
+.search-box-wrapper input {
+    width: 100%;
+    min-height: 50px;
+    border-radius: 16px;
+    border: 1px solid rgba(104, 59, 147, 0.12);
+    background: #fbfaff;
+    padding: 0 16px 0 44px;
+    color: #281a43;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.search-box-wrapper input:focus {
+    border-color: #683B93;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(104,59,147,0.1);
+}
+
+.filter-dropdowns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fbfaff;
+    border: 1px solid rgba(104, 59, 147, 0.12);
+    border-radius: 12px;
+    padding: 0 14px;
+    height: 50px;
+    color: #5c5170;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.dropdown-container:hover {
+    border-color: rgba(104, 59, 147, 0.3);
+}
+
+.dropdown-container svg {
+    color: #683B93;
+}
+
+.dropdown-container select {
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 13px;
+    color: #281a43;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    width: 140px;
+}
+
+/* ── Payments Glass Table ─── */
+.premium-table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(104, 59, 147, 0.08);
+}
+
+.glass-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+.glass-table th {
+    background: #Fbf9fe;
+    color: #683B93;
+    font-weight: 700;
+    text-align: left;
+    padding: 16px 20px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid rgba(104, 59, 147, 0.1);
+}
+
+.glass-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(104, 59, 147, 0.05);
+    color: #4a5568;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.glass-table tbody tr {
+    transition: all 0.2s;
+}
+
+.glass-table tbody tr:hover {
+    background: rgba(104, 59, 147, 0.02);
+}
+
+.payment-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.payment-status-badge.paid {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+}
+
+.payment-status-badge.pending {
+    background: rgba(245, 158, 11, 0.1);
+    color: #d97706;
+}
+
+.payment-status-badge.refunded {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+}
+
+.patient-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-info .patient-name {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 14px;
+}
+
+.patient-info .payment-id {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+.amount-text {
+    font-weight: 700;
+    color: #1e293b;
+}

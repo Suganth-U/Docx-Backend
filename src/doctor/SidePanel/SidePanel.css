@@ -1,0 +1,175 @@
+/* SidePanel.css - Modern Professional Design */
+
+.side-panel {
+  width: 16rem;
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* Logo Section */
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  height: 2rem;
+  width: auto;
+}
+
+.brand-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  font-family: ui-serif, Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  flex: 1;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+}
+
+.nav-category {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.category-header:hover {
+  color: #6b7280;
+}
+
+.category-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 0.5rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: #f3e8ff; /* Light purple hover */
+  color: #9481ff;
+}
+
+.nav-item-active {
+  background-color: #9481ff; /* Hero Purple Active */
+  color: white !important;
+  box-shadow: 0 4px 6px -1px rgba(148, 129, 255, 0.4);
+}
+
+.nav-item-active .nav-icon {
+  color: white;
+}
+
+.nav-icon {
+  flex-shrink: 0;
+  transition: color 0.1s ease;
+}
+
+/* Divider */
+.nav-divider {
+  height: 1px;
+  background-color: #f3f4f6;
+  margin: 0.5rem 1.5rem;
+}
+
+/* Footer Section */
+.panel-footer {
+  padding: 0.75rem 0.5rem;
+  border-top: 1px solid #f3f4f6;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.logout-item {
+  color: #dc2626 !important;
+}
+
+.logout-item:hover {
+  background-color: #fef2f2;
+  color: #dc2626 !important;
+}
+
+/* Scrollbar Styling */
+.side-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.side-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.side-panel::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.side-panel::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .side-panel {
+    width: 4.5rem;
+  }
+
+  .brand-text {
+    display: none;
+  }
+
+  .nav-item span {
+    display: none;
+  }
+
+  .nav-item {
+    justify-content: center;
+    padding: 0.75rem;
+  }
+}

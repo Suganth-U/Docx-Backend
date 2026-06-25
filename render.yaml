@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: docx-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5001
+      # Note: Add the rest of your environment variables (e.g. MONGO_URI) directly in the Render dashboard
