@@ -1,0 +1,83 @@
+{
+  "doctorSearchDefaults": {
+    "availability": "open",
+    "sort": "next-available"
+  },
+  "pharmacyCategoryMappings": [
+    {
+      "category": "Cardiac care",
+      "terms": ["heart", "cardio", "cardiology", "cholesterol", "ldl", "hdl", "triglycerides", "blood pressure"],
+      "specialtySlugs": ["cardiology"]
+    },
+    {
+      "category": "Respiratory care",
+      "terms": ["cough", "fever", "cold", "flu", "breathing", "allergy", "allergies", "wheezing", "asthma", "respiratory", "pulmonology"],
+      "specialtySlugs": ["pulmonology", "allergy-immunology"]
+    },
+    {
+      "category": "Stomach care",
+      "terms": ["stomach", "nausea", "vomiting", "vomit", "acidity", "ulcer", "gastric", "indigestion", "constipation", "diarrhea", "abdomen"],
+      "specialtySlugs": []
+    },
+    {
+      "category": "Diabetic Care",
+      "terms": ["diabetes", "diabetic", "glucose", "sugar", "insulin", "hba1c"],
+      "specialtySlugs": []
+    },
+    {
+      "category": "Infection",
+      "terms": ["infection", "antibiotic", "infected", "wound infection", "bacterial", "viral"],
+      "specialtySlugs": []
+    },
+    {
+      "category": "Household Remedies",
+      "terms": ["otc", "over the counter", "household remedy", "home remedy", "pain relief", "first aid", "wellness", "vitamin"],
+      "specialtySlugs": []
+    }
+  ],
+  "symptomRecommendationMappings": [
+    {
+      "label": "headache",
+      "terms": ["headache", "migraine", "head pain"],
+      "category": "Household Remedies",
+      "medicineNames": ["Panadol", "Paracetamol"],
+      "specialtySlugs": ["neurology", "general-medicine"]
+    },
+    {
+      "label": "fever",
+      "terms": ["fever", "body pain", "flu", "temperature"],
+      "category": "Household Remedies",
+      "medicineNames": ["Panadol", "Paracetamol"],
+      "specialtySlugs": ["general-medicine", "pediatrics"]
+    },
+    {
+      "label": "cough",
+      "terms": ["cough", "dry cough", "chesty cough"],
+      "category": "Respiratory care",
+      "medicineNames": ["Acefyl Cough Syrup", "Cosome Cough Syrup"],
+      "specialtySlugs": ["pulmonology", "general-medicine"]
+    },
+    {
+      "label": "allergy",
+      "terms": ["allergy", "allergies", "sneezing", "itchy eyes", "runny nose"],
+      "category": "Respiratory care",
+      "medicineNames": ["Zyrtec Tablets", "Telfast Tablets"],
+      "specialtySlugs": ["allergy-immunology", "pulmonology"]
+    },
+    {
+      "label": "stomach pain",
+      "terms": ["stomach pain", "acidity", "gastric", "indigestion", "heartburn", "nausea"],
+      "category": "Stomach care",
+      "medicineNames": ["Nexum Capsules", "Risek Capsules"],
+      "specialtySlugs": ["general-medicine"]
+    }
+  ],
+  "queryOnlySpecialtySlugs": [
+    "dermatology",
+    "dentistry",
+    "orthopedics",
+    "ent",
+    "genetics",
+    "surgery"
+  ]
+}

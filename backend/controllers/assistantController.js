@@ -3,7 +3,7 @@ const Doctor = require('../models/Doctor');
 const DoctorVirtualSchedule = require('../models/DoctorVirtualSchedule');
 const Medicine = require('../models/Medicine');
 const User = require('../models/User');
-const assistantNavigationMap = require('../../shared/assistantNavigationMap.json');
+const assistantNavigationMap = require('../shared/assistantNavigationMap.json');
 const {
     HEALTH_CHAT_DISCLAIMER,
     HEALTH_SPECIALTIES,
